@@ -3,7 +3,6 @@
 ## Table of Contents
 
 - Introduction
-- Features
 - Installation
 
 ## Introduction
@@ -16,33 +15,34 @@ If you already have installed `aptos-move-analyzer` or `sui-move-analyzer`, plea
 
 ### How to Install (Must Read)
 The `endless-move-analyzer` Visual Studio Code extension works via two type of components:
-- `endless-move-analyzer language server`
-- the VS Code extension itself ( move-analyzer.vsix and move-syntax.vsix)
+- Language Server
+- VSCode Extension itself (move-analyzer.vsix and move-syntax.vsix)
 
-That means we need to install both two components.
+We will install both two components.
 
-#### Installing `endless-move-analyzer language server`
+#### Installing Language Server
 
+We pre-build language server binary file: `move-analyzer` for different platform under `https://github.com/endless-labs/endless-vscode-plugin/tree/main/move-analyzer`
 - Ubuntu 24 X86-64: move-analyzer, md5 checksum: 466b3fa065245ab76d9ecb8cfbb20cd0
 - Ubuntu 20 X86-64: move-analyzer, md5 checksum: 1df4cacb73a8e7a70f680d461507d5c4
 - Windows10/11 X86-64: move-analyzer, md5 checksum: 9c621566fd23f02cdb014641f5c71bfa
 
 Download and Install the precompiled binaries:  
-- Download the binary files for your platform from the endless-move-analyzer release page.
-- Rename the file to `move-analyzer`.
+- Download the zip file according to your platform.
+- Unzip and rename the file to `move-analyzer`.
 - Ensure `move-analyzer` is include in your system's PATH environment variable.
 
-After completing the above steps, restart VS Code.
+After completing the above steps, please restart VS Code.
 
 #### Installing VS Code extensions
 
-Here, we need to install two extensions:
-1. endless-move-syntax
-2. endless-move-analyzer
+We will install two extensions:
+1. move-syntax.vsix
+2. move-analyzer.vsix
 
-The `endless-move-syntax` extension provides syntax highlighting, language support for The Move language, including support for defining structures, functions, and other keywords.
+The `move-syntax.vsix` extension provides syntax highlighting, language support for The Move language, including support for defining structures, functions, and other keywords.
 
-The `endless-move-analyzer` extension integrates with the language server to deliver comprehensive Move language support in VS Code.
+The `move-analyzer.vsix` extension integrates with the language server to deliver comprehensive Move language support in VS Code.
 
 VS Code extension is installed via:
 1. manually installed in local VSIX file
@@ -69,7 +69,7 @@ If you see an error message language server executable `move-analyzer` could not
 
 Confirm that invoking `move-analyzer --version` in a command line terminal prints out `move-analyzer` version number. 
 
-If it doesn't, then retry the instructions in [Installing `endless-move-analyzer language server`](#installing-endless-move-analyzer-language-server). 
+If it doesn't, then retry the instructions in [Installing Language Server](#Installing Language Server). 
 
 If it does successfully print this output, try closing and re-opening the Visual Studio Code application, as it may not have picked up the update to your PATH.
 
