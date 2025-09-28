@@ -95,4 +95,5 @@ Therefore, the Move.toml file must be found in the project directory for the plu
 In addition, if you have already opened the move project before, the installed plug-in will not take effect in time. You need to reopen the VS Code window and open the move project code again before the plug-in is activated.
 
 B. Need Compile Project with Move.toml
+
 When you first open a project, there will be some dependencies (configured in Move.toml) that need to be downloaded, so you need to run `endless move compile` command first to build the project. During the build process, the dependencies will be downloaded. Once all the dependencies for the project have been downloaded, endless-move-analyzer can properly parse the dependencies and project source code.
